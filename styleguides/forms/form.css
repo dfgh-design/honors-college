@@ -1,0 +1,565 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300);
+
+@font-face {
+    font-family: Roboto Light Condensed;
+    src: url(../fonts/RobotoCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: Gyre-Schola;
+    src: url(../fonts/texgyreschola-regular.otf) format("opentype");
+}
+
+html,
+body {
+  font-family: "proxima-nova", "proxima nova", "helvetica neue", "helvetica", "arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 20px 10px;
+  color: #444;
+  background-color: #fff;
+}
+@media (min-width: 480px) {
+  html,
+  body {
+    padding: 30px 20px;
+  }
+}
+
+form {
+  font-family:Roboto Light Condensed;
+}
+
+img {
+  display: block;
+  margin: 1rem auto;
+}
+
+p {
+  display: block;
+  margin: 0.25em 0 1.5em 0;
+}
+
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ol li {
+  margin: 0.75em 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 30px 0 0;
+  padding: 0;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06rem;
+  font-size: .8rem;
+  color: #bbbbbb;
+  margin-bottom: 0.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+legend:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  top: 0.5rem;
+  margin-left: 0.5rem;
+  background: #dfdfdf;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size:16px;
+}
+
+.form-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+@media (min-width: 700px) {
+  .form-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.form-control {
+  position: relative;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+input[type="text"], select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  box-shadow: 0;
+  margin: 0;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: normal;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  outline: 0;
+  display: block;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #444;
+  /*border-radius: 3px;*/
+  border: 1px solid #dfdfdf;
+  font-size: 1rem;
+  height: 3rem;
+  padding: 0 .85rem;
+  width: 100%;
+  position:relative;
+}
+
+#multiple-select-field {
+  height:100px;
+}
+
+#multiple-select-field:after {
+  display:none;
+}
+
+select:after, .select:after {
+  content:'';
+  position:absolute;
+  right:15px;
+  top:50%;
+  transform:translate(-50%, -50%);
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ccc;
+  z-index:20;
+}
+
+input[type="text"] + label, select + label {
+  pointer-events: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #bbbbbb;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+}
+.is-focused input[type="text"], .is-focused select {
+  border-color: rgb(242,101,34);
+}
+.has-heading input[type="text"], .has-heading select {
+  padding: 1.3rem 0.85rem 0.45rem 0.85rem !important;
+}
+.is-active input[type="text"] + label, .is-active select + label {
+  visibility: visible;
+  opacity: 1;
+}
+.is-focused.is-active input[type="text"] + label, .is-focused.is-active select + label {
+  color: rgb(242,101,34);
+}
+
+.float-label {
+  position: relative;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/**
+Radio & Checkbox Base Styles
+**/
+input[type="radio"],
+input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /*border-radius: 3px;*/
+  line-height: 20px;
+  height: 16px;
+  outline: 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 16px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  margin-top: -1px;
+}
+
+input[type="checkbox"] {
+  border:3px solid #dfdfdf;
+  width:22px;
+  height:22px;
+  padding:0;
+}input[type="radio"] {
+  border:1px solid #dfdfdf;
+}
+
+input[type="radio"][disabled],
+input[type="checkbox"][disabled] {
+  cursor: not-allowed;
+}
+input[type="radio"][disabled] label,
+input[type="checkbox"][disabled] label {
+  cursor: not-allowed;
+}
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  margin: 0px 0 10px -4px;
+  padding-left: 38px;
+  cursor: pointer;
+  line-height: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444;
+  display: inline-block;
+  font-style: normal;
+  max-width: 100%;
+}
+
+/**
+Checkbox Styles
+**/
+input[type="checkbox"] {
+  /*border-radius: 4px;*/
+  background-color: #fff;
+  background-size: 11px;
+  background-position: 4px 5px;
+}
+input[type="checkbox"]:hover {
+  background-image: url(../img/checkmark.svg);
+}
+input[type="checkbox"]:checked {
+  border-width:1px;
+  /*background-color: #66bc46;*/
+  border-color: rgb(242,101,34);
+  /*background-image: url(../img/checkmark.svg);*/
+}
+input[type="checkbox"]:checked + label:after {
+  /*Add another block-level blank space*/
+  content: '';
+  display: block;
+  /*Make it a small rectangle so the border will create an L-shape*/
+  width: 12px;
+  height: 24px;
+  /*Add a white border on the bottom and left, creating that 'L' */
+  border: solid rgb(242,101,34);
+  border-width: 0 4px 4px 0;
+  /*Rotate the L 45 degrees to turn it into a checkmark*/
+  transform: translate(80%, -40%) rotate(45deg);
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+/**
+Radio Styles
+**/
+input[type="radio"] {
+  border-radius: 100%;
+  /*border-size:2px;*/
+  /*border-color: rgb(100,100,100);*/
+  /*background-image: url(../img/radio-default.svg);*/
+  /*background-size: 14px;*/
+  background-position: 2px 2px;
+  position:relative;
+  display:inline-block;
+  padding:0;
+  margin:0;
+  margin-left:8px;
+  margin-top:-4px;
+  box-shadow: 0 0 0 0px rgb(255,255,255), 0 0 0 2px rgb(220,220,220);
+}
+
+label[for='radio-input'] {
+  line-height:2.2;
+}
+
+
+input[type="radio"]:hover {
+  background-image: url(../img/radio-hover-checked.svg);
+}
+input[type="radio"]:checked {
+  background-color: rgb(255,153,0);
+  border-color: rgb(242,101,34);
+  box-shadow: 0 0 0 1px rgb(255,255,255), 0 0 0 2px rgb(255,153,0);
+}
+
+/**
+Submit Styles
+**/
+input[type="submit"],
+input[type="button"] {
+  font-family:Gyre-Schola;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-transform: uppercase;
+  /*border-radius: 4px;*/
+  font-weight: bold;
+  width: auto;
+  /*background-color: #66bc46;*/
+  background-color:rgb(242,101,34);
+  color: #fff;
+  border: 0;
+  padding: 0.45rem 2rem;
+  margin: 1rem 0;
+  cursor:pointer;
+  transition: background-color .3s;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: rgb(255,131,64);
+}
+
+input.secondary[type='button']{
+  background-color: rgb(237,22,81);
+  padding: .3rem .5rem;
+  font-size: 14px;
+}
+input.secondary[type='button']:hover{
+  background-color: rgb(255,42,101);
+}
+
+input[type="submit"] {
+    font-size:1em;
+    cursor:pointer;
+}
+
+span.form-required {
+    display:none;
+}
+
+.helper {
+    color:#888;
+    font-size:.7em;
+    font-weight:lighter;
+}
+
+.helper span {
+    font-weight:bold;
+    color:#777;
+    text-decoration:underline;
+}
+
+p.form-message {
+    text-align:center;
+}
+
+label {
+    font-weight:bold;
+}
+
+.homeleftcol .messages--error, .messages, div.error {
+    display:block !important;
+    visibility: visible !important;
+    width: 60%;
+    border: 1px solid red;
+    padding: 10px;
+    background-position: 8px 8px; /* LTR */
+    background-repeat: no-repeat;
+    border: 1px solid red;
+    margin: 0px 20% 20px;
+    padding: 10px 10px 10px 50px; /* LTR */
+    background-color:#ffdddd;
+    /*border-radius:2px;*/
+    font-weight: bold;
+}
+
+.form-item-phone-type {
+    position:relative;
+}
+
+input,
+textarea,
+select {
+  background: #fff;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  box-shadow: 0;
+  margin: 0;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: normal;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  outline: 0;
+  display: block;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #444;
+  border-radius: 0px;
+  border: 1px solid #dfdfdf;
+  font-size: 1rem;
+  height: 3rem;
+  padding: 0 .85rem;
+  width: 100%;
+}
+input[type="text"] + label,
+select + label {
+  pointer-events: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #bbbbbb;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+}
+input[type="text"] + label + .icon,
+select + label + .icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 1.25rem;
+}
+
+#disabled-input, label[for="disabled-input"] {
+  color:#aaa;
+}
+
+textarea {
+  height:100px;
+  padding:10px;
+}
+
+form div {
+  position:relative;
+  margin:16px;
+}
+
+input[type="password"]{
+  font-size:26px;
+}
+
+input[for='color-input'], input[type='color']{
+width:100px;
+height:100px;
+padding:2px;
+/*border-radius:100%;*/
+}
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid darkorange;
+  height: 16px;
+  width: 16px;
+  border-radius: 0px;
+  background: rgb(242,101,34);
+  cursor: pointer;
+  margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */*/
+  box-shadow: 0 0 0 1px rgb(255,255,255), 0 0 0 2px rgb(255,153,0);
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+  border: 1px solid darkorange;
+  height: 16px;
+  width: 16px;
+  border-radius: 0px;
+  background: rgb(242,101,34);
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgb(255,255,255), 0 0 0 2px rgb(255,153,0);
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+  border: 1px solid #ddd;
+  height: 16px;
+  width: 16px;
+  border-radius: 0px;
+  background: rgb(242,101,34);
+  cursor: pointer;
+}
+
+
+input[type='range'] {
+  border:1px solid #ddd;
+  height:1px;
+  margin-top:20px;
+}

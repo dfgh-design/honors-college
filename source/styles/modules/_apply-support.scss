@@ -1,0 +1,176 @@
+.apply-support {
+  width:100vw;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  margin:0 auto;
+  align-items:center;
+  text-align:center;
+  background-color:#fcfcfc;
+    a {
+      position:relative;
+      display:inline-block;
+      padding:.5rem;
+      color:white;
+      font-size: 1.5rem;
+      background-color:$hcGray;
+      border:4px solid $hcGray;
+      transition: background-color .2s;
+      z-index:2;
+      &:hover {
+        background-color:rgba(0,0,255,0);
+      }
+      h1 {
+      margin:auto;
+      }
+      &:nth-of-type(1) {
+        background-color:black;
+        border:4px solid black;
+
+        &:hover {
+            //color:black;
+            background-color:rgba(0,0,255,0);
+          }
+      }
+    @include mq(769px) {
+    margin:3rem;
+    }
+    &:nth-of-type(3) {
+        color:$hcGray;
+        background-color:#ebebeb;
+        border:4px solid #ebebeb;
+
+        &:hover {
+            //color:$hcPink;
+            color:#ebebeb;
+            background-color:rgba(0,0,255,0);
+          }
+      }
+      
+      width:33.34%;
+      margin:0;
+    @include mq(768px) {
+    width:initial;
+    }
+    }
+    &:before {
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      left:0;
+      top:0;
+      background-color:$hcOrange;
+      z-index:0;
+    }
+    &:after {
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      left:0;
+      top:0;
+      background:url('../images/pi-kappa.jpg') no-repeat center center;
+      background-size:cover;
+      opacity:.1;
+      z-index:0;
+    }
+  }
+
+  .apply-grid {
+  padding:1rem;
+  text-align:center;
+}
+.apply-grid-alt {
+  padding:1rem;
+  text-align:left;
+  margin:0 auto;
+}
+.apply-single {
+  width:100%;
+  padding:2rem .25rem;
+  display:inline-block;
+  border: 2px solid black;
+  margin-bottom:.25rem;
+  @include mq(400px){
+    width:48%;
+  }
+  @include mq(800px){
+    width:31%;
+  }
+  @include mq(1440px){
+    width:24%;
+  }
+
+}
+.general {
+  width:auto;
+  border:5px solid $hcOrange;
+  padding:5rem;
+  margin-bottom:5rem;
+}
+.general h1 {
+  font-weight:bold;
+  font-size:48px;
+  }
+  .general-alt {
+  width:90%;
+  display:block;
+  height:300px;
+  padding-top:102px;
+  margin:1rem auto;
+  background-color:$hcPink;
+  border:5px solid $hcPink;
+    &:nth-of-type(2) {
+  background-color:$hcOrange;
+  border-color:$hcOrange;
+  }
+  &:nth-of-type(3) {
+  background-color:$vcuGold;
+  border-color:$vcuGold;
+  }
+  &:hover {
+  background-color:white;
+  transition:250ms all;
+  -webkit-transition:250ms all;
+  h1 {color:black;}
+  }
+  @include mq(800px) {
+  width:33%;
+  display:inline-block;
+}
+}
+.general-alt h1 {
+  font-weight:bold;
+  color:white;
+  font-size:48px;
+  text-align:center;
+  }
+.explore-options {
+  border:5px $hcOrange solid;
+  padding:3rem;
+
+  transition:250ms all;
+  -webkit-transition:250ms all;
+  &:hover {
+  background-color:$hcOrange;
+  border:5px $hcOrange solid;
+  h2 {color:white;}
+  }
+  h2 {
+  text-align:center;
+  font-size:28px;
+  font-weight:bold;
+  color:$hcOrange;
+  }
+  width:auto;
+  margin:0;
+  @include mq(800px){
+    width:48%;
+  margin-left:2rem;
+  }
+}
+.bio a {
+ text-decoration:underline;
+ color:$hcOrange;
+}

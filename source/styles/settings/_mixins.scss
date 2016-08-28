@@ -1,0 +1,73 @@
+/***
+
+Sass Mixins
+
+Feel free to use whatever custom mixins you choose.
+But comment about the context of each mixin and keep
+them here to stay organized!
+
+***/
+
+// CLEARFIX
+@mixin clear() {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+// MEDIA QUERIES: Default
+@mixin mq($width, $height: false) {
+    @if $height {
+        @media ( min-width: + $width ) and ( min-height: + $height ) {
+            @content;
+        }
+    }@else {
+        @media ( min-width: + $width ) {
+            @content;
+        }
+    }
+}
+
+// MEDIA QUERIES: Range
+@mixin mq_range($min, $max, $height: false) {
+    @if $height {
+        @media ( min-height: + $min ) and ( max-width: + $max ) and ( min-height: + $height ) {
+            @content;
+        }
+    }@else {
+        @media ( min-width: + $min ) and ( max-width: + $max ) {
+            @content;
+        }
+    }
+}
+
+// MEDIA QUERIES: Retina
+@mixin mq_retina {
+    @media
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
+// MEDIA QUERIES: Print
+@mixin mq_print {
+    @media print {
+        @content;
+    }
+}
+
+// VERTICAL ALIGN
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

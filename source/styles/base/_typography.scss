@@ -1,0 +1,108 @@
+/***
+
+Typography
+
+***/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300);
+
+@font-face {
+    font-family: Roboto Light Condensed;
+    src: url(../fonts/RobotoCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: Gyre-Schola;
+    src: url(../fonts/texgyreschola-regular.otf) format("opentype");
+}
+
+*, *:before, *:after {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+    margin:0;
+}
+
+html, body {
+    font-family: serif;
+}
+.article {
+h1 {
+        font-family: 'Roboto Slab';
+        font-weight:bold;
+        font-size:3rem;
+        letterspacing:0.9;
+}
+h2 {
+    font-family: 'Roboto Light Condensed', serif;
+    font-weight:300;
+    font-size:3rem;
+    line-height:1.5;
+}
+h3 {
+        font-family: 'Roboto Slab';
+        font-weight:300;
+        font-size:2rem;
+        letterspacing:0.9;
+}
+h4 {
+    font-family: 'Roboto Light Condensed', serif;
+    font-weight:300;
+    font-size:1.5rem;
+    line-height:1.5;
+}
+h5 {
+        font-family: 'Gyre-Schola', Times New Roman, serif;
+        font-weight:bold;
+        font-size:1rem;
+}
+h6 {
+        font-family: 'Roboto Slab';
+        font-weight:bold;
+        font-size:1rem;
+}
+}
+h1 {
+	font-family: 'Roboto Light Condensed', serif;
+	font-weight:300;
+    font-size:1.5rem;
+    @include mq(500px){
+        font-size:2rem;
+    }
+}
+
+h2 {
+	font-family: 'Roboto Slab';
+}
+
+h3 {
+    font-size:1.4rem;
+}
+
+p {
+	// font-family: 'Roboto Light Condensed', serif;
+    font-family: Gyre-Schola;
+    line-height:1.5;
+    margin-top:1rem;
+}
+ul {
+    list-style:circle;
+    padding:1rem;
+}
+li {
+	font-family: 'Roboto Light Condensed', serif;
+    line-height:2;
+    font-size:16px;
+}
+
+.underline {
+    border-bottom:2px solid white;
+}
+
+.section-break {
+  padding:1rem;
+  text-align:center;
+}

@@ -1,0 +1,24 @@
+/***
+
+HONORS COLLEGE BREADCRUMBS
+
+***/
+
+.hc-breadcrumbs {
+	margin: 0;
+	padding: 0;
+	@include clear;
+
+	&__item {
+		list-style-type: none;
+		float: left;
+	}
+
+	&__item--current {
+		font-weight: bold;
+	}
+
+	&__item--divider {
+		margin: 0 .5rem;
+	}
+}

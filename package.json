@@ -1,0 +1,51 @@
+{
+  "name": "vcu-honors-college",
+  "version": "1.0.0",
+  "description": "A gulp-based starter theme for Jekyll",
+  "author": "CO+LAB Digital",
+  "repository": {
+    "type": "git",
+    "url": "Custom Wordpress theme developed off of the Cork development starter theme."
+  },
+  "scripts": {
+    "start": "npm install && gulp",
+    "build": "gulp build:development",
+    "production": "gulp build:production",
+    "watch": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-changed": "^1.2.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.0.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.7",
+    "gulp-webserver": "^0.9.1",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.0.1",
+    "postcss-flexibility": "^1.0.3",
+    "require-dir": "^0.3.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "bourbon": "^4.2.3",
+    "bourbon-neat": "^1.7.2",
+    "fastclick": "^1.0.6",
+    "form-data": "^1.0.0-rc4",
+    "handlebars": "^4.0.5",
+    "lodash": "^4.5.1",
+    "module_name": "^1.0.0",
+    "normalize.scss": "^0.1.0"
+  }
+}

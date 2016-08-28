@@ -1,0 +1,126 @@
+  .home-masonry .quote-block {
+    width:100vw;
+    cursor:pointer;
+    background-color:rgba($hcOrange, 1);
+    display:block;
+    bottom:0;
+    line-height:1.2;
+    position:relative;
+    color:white;
+    transform:translate(0, 0);
+    transition: transform .3s;
+    @include mq(800px){
+      transform:translate(0, 100%);
+    }
+    &:hover {
+      transform:translate(0, 0%);
+      h3 {
+        transition: transform .3s;
+        transform:translate(0, 0%);
+      }
+    }
+    .quote-container {
+      margin:0;
+      display:flex;
+      justify-content:space-between;
+      width:100%;
+    }
+    article {
+      width:34%;
+      &:hover .quote-image:before {
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-color:rgba($hcGray, .7);
+      }
+      &:hover p {
+        opacity:1;
+      }
+    }
+    .quote-image {
+      height:150px;
+      width:100%;
+      background-size:cover;
+      background-position:center;
+      position:relative;
+      &:before {
+        content:'';
+        transition: background-color .3s;
+      }
+      p {
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        font-size:18px;
+        color:$white;
+        opacity:0;
+        transition:opacity .3s;
+      }
+    }
+    h3 {
+      padding:2rem 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position:relative;
+      font-family:"Times New Roman", serif;
+      background-color:rgba($hcOrange, 1);
+      transform:translate(0, 0);
+      transition: transform .35s;
+      @include mq(800px){
+        transform:translate(0,-100%);
+      }
+      &:before, &:after {
+        font-family:cursive;
+        content:'"';
+        position:absolute;
+        font-size:68px;
+        font-weight:bold;
+        color:rgba($white, .3);
+      }
+      &:before {
+        top:5px;
+        left:5px;
+      }
+      &:after {
+        bottom:5px;
+        right:5px;
+        transform: scaleX(-1);
+      }
+    }
+    .sub-quote {
+    background-color:#ebebeb;
+      padding:0rem;
+    }
+    h4 {
+      width: 100%;
+      display:inline-block;
+      text-align:center;
+      color:black;
+      font-family:"Times New Roman", serif;
+      padding:5px;
+    }
+    .learn-more {
+      width:20%;
+      display:inline-block;
+      background-color:$hcGray;
+      border:2px solid $hcGray;
+      padding:4px;
+      color:$white;
+      text-align:center;
+      transition: background-color .2s;
+      font-family:'Roboto Light Condensed';
+      text-transform:uppercase;
+      &:hover {
+        background-color:transparent;
+      }
+    }
+    @include mq(800px){
+      width:60vw;
+      position:absolute;
+    }
+  }

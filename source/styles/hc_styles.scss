@@ -1,0 +1,55 @@
+/***
+
+Honors College Styles (carbon_styles.scss)
+
+This file represents the primary stylesheet generated
+and utilized by the theme. It is namespaced to avoid
+any potential enqueuing conflicts.
+
+No actual styles should be entered directly to this file.
+All theme styles should be organized and included in this
+file using @import.
+
+***/
+
+// Reset Styles
+@import "settings/reset";
+
+// Normalize reset
+@import "node_modules/normalize.scss/normalize";
+
+// Include Bourbon & Neat libraries (ready to add if needed)
+// @import "node_modules/bourbon/app/assets/stylesheets/bourbon";
+// @import "node_modules/bourbon-neat/app/assets/stylesheets/neat";
+
+// Import settings
+@import "settings/variables";
+@import "settings/mixins";
+
+// Carbon Toolbox Styles (use as needed)
+@import "toolbox/breadcrumbs";
+@import "toolbox/grid";
+
+// Import base styles
+@import "base/global";
+@import "base/typography";
+
+// Import modules
+@import "modules/header/nav";
+@import "modules/header/sub-nav";
+@import "modules/header/branding-banner";
+
+@import "modules/hero";
+@import "modules/card";
+@import "modules/info-secondary";
+@import "modules/cta-like-this";
+@import "modules/footer";
+@import "modules/apply-support";
+@import "modules/one-col";
+@import "modules/home-masonry";
+@import "modules/brand-headline";
+@import "modules/quote-block";
+@import "modules/card-staff";
+@import "modules/isotope";
+@import "modules/event";
+@import "modules/event-list";

@@ -1,0 +1,33 @@
+.brand-headline {
+    font-size:48px;
+    font-family:Roboto Slab;
+    position:relative;
+    z-index:3;
+    padding-bottom:2rem;
+    .semi-colon {
+      font-weight:lighter;
+      color:transparent;
+      position:relative;
+      font-size:28px;
+      bottom:4px;
+      &:before, &:after {
+        content: '';
+        height: 8px;
+        width: 8px;
+        position: absolute;
+        left:50%;
+        transform:translate(-50%) rotate(0deg);
+        border: 2px solid white;
+        transition:transform .5s, background-color .3s;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+    }
+    .subject {
+      font-weight:bold;
+    }
+  }

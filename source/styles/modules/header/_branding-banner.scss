@@ -1,0 +1,22 @@
+.branding-banner {
+	height:4vh;
+	width:100%;
+	text-align:center;
+	padding:10px 0 0 0;
+	background-color:$black;
+	img {
+		height:20px;
+	}
+  .--large {
+    display:none;
+    @include mq(400px){
+      display:inline-block;
+    }
+  }
+  .--small {
+    display:inline-block;
+    @include mq(400px){
+      display:none;
+    }
+  }
+}

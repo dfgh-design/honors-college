@@ -1,0 +1,121 @@
+
+.sub-nav {
+  background-color:$secondaryGray;
+  display:none;
+  &__nodes {
+    padding:10px 0px;
+    text-align:center;
+    display:none;
+    // &.-selected {
+    &.-selected {
+      display:block;
+    }
+    >li {
+      font-size:15px;
+      font-family:'TeX Gyre Schola', sans-serif;
+      display:inline-block;
+      position:relative;
+      margin-left: 3rem;
+      transition:color .35s;
+      &:first-child {
+        margin-left:0px;
+      }
+      &:hover a{
+        border-bottom:1px $hcPink solid;
+      }
+      @media (max-width:768px) {
+        margin-left:0;
+      }
+    }
+  }
+  &__node {
+    &--active {
+        font-weight:bold;
+    }
+    // &.-header, &.-header {
+    &.-header {
+      opacity:0;
+    }
+    // &.--back, &.-back {
+    &.-back {
+      opacity:0;
+      transition:opacity 2.5s;
+      cursor:pointer;
+    }
+  }
+  // &.--home, &.-home {
+  &.-home {
+  }
+  @include mq(1000px){
+    display:block;
+    // &.--home, &.-home {
+    &.-home {
+      display:none;
+    }
+  }
+}
+
+// .--mobile-active, .-mobile-active, .mobile-active {
+.mobile-active {
+  .sub-nav, .home {
+    display:block;
+    &__nodes {
+      z-index:20;
+      color:white;
+      display:flex;
+      height:90vh;
+      padding-bottom:20vh;
+      width:100%;
+      position:relative;
+      flex-wrap:wrap;
+      flex-direction:column;
+      justify-content:space-around;
+      position:absolute;
+      top:20vh;
+      left:60vw;
+      opacity:0;
+      transition:left 1s, opacity .6s;
+    }
+  }
+}
+
+// .--mobile-sub-active, .-mobile-sub-active {
+.-mobile-sub-active {
+  .sub-nav {
+    // &__nodes.-selected, &__nodes.-selected {
+    &__nodes.-selected {
+      left:0vw;
+      opacity:1;
+    }
+    &__node {
+      // &.-header, &.-header {
+      &.-header {
+        font-family:Roboto Light Condensed;
+        text-transform:uppercase;
+        font-size:18px;
+        opacity:1;
+        transition:opacity 1s;
+        a {
+          border-bottom:2px solid $hcOrange;
+        }
+      }
+      &--active {
+        &:after {
+          display:none;
+        }
+      }
+      // &.--back, &.-back {
+      &.-back {
+        opacity:1;
+        &:before {
+          content:"<";
+          position:absolute;
+          bottom:35vh;
+          left:5px;
+          font-weight:bold;
+          font-size:22px;
+        }
+      }
+    }
+  }
+}

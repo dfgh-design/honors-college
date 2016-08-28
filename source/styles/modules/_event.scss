@@ -1,0 +1,81 @@
+.featured-events {
+  text-align:center;
+}
+.event-single {
+  width:95%;
+  height:200px;
+  background-color:blue;
+  position:relative;
+  background-position:center;
+  background-size:cover;
+  display:inline-block;
+  margin:.5rem 1%;
+  text-align:left;
+  box-shadow:5px 5px 5px rgba(0,0,0, .2);
+  &__overlay {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,150,100,.2);
+    transition:background-color .4s;
+  }
+  &:hover .event-single__overlay {
+    background-color: rgba(255,150,100,0);
+  }
+  @include mq(600px){
+  }
+  @include mq(800px){
+    height:300px;
+    width:30%;
+  }
+  @include mq(1000px){
+    height:400px;
+  }
+}
+.event-info {
+  display:flex;
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  background-color:rgba(255,255,255,.8);
+  h3 {
+    font-family: gyre-schola;
+  }
+}
+.event-date {
+  background-color:$hcOrange;
+  color:$white;
+  padding:.5rem;
+  text-align:center;
+  font-family:Roboto Light Condensed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  p {
+    line-height:1;
+  }
+}
+.event-month {
+  font-size:12px;
+  margin:0;
+}
+.event-day {
+  font-size:34px;
+  margin:0;
+}
+.event-teaser {
+  padding:.5rem 1rem;
+}
+.event-time, .event-location {
+  display:inline-block;
+  font-size:14px;
+  font-family:Roboto Light Condensed;
+}
+.event-time:after {
+  content:"|";
+  padding:0 .5rem;
+}

@@ -1,0 +1,45 @@
+/***
+
+Sass Variables
+
+Enter all variables used across stylesheets here.
+These could include fonts, colors, measurements, etc.
+
+***/
+
+// GLOBAL SIZE VARIABLE
+$maxWidth: 1440px;
+
+// COLORS
+$black: #000000;
+$white: #ffffff;
+$secondaryGray: #ebebeb;
+$yellow: yellow;
+$blue: blue;
+$hcGray: rgb(88,89,91);
+$hcOrange: rgb(242,101,34);
+$hcLightOrange: rgb(255,131,64);
+$hcVeryLightOrange: rgb(220,220,220);
+$hcPink: rgb(237,22,81);
+$socialBlue: #000FC3;
+$vcuGold: #F8B800;
+
+$gray_5:  lighten($black, 5%);
+$gray_10: lighten($black, 10%);
+$gray_15: lighten($black, 15%);
+$gray_20: lighten($black, 20%);
+$gray_25: lighten($black, 25%);
+$gray_30: lighten($black, 30%);
+$gray_35: lighten($black, 35%);
+$gray_40: lighten($black, 40%);
+$gray_45: lighten($black, 45%);
+$gray_50: lighten($black, 50%);
+$gray_55: lighten($black, 55%);
+$gray_60: lighten($black, 60%);
+$gray_65: lighten($black, 65%);
+$gray_70: lighten($black, 70%);
+$gray_75: lighten($black, 75%);
+$gray_80: lighten($black, 80%);
+$gray_85: lighten($black, 85%);
+$gray_90: lighten($black, 90%);
+$gray_95: lighten($black, 95%);

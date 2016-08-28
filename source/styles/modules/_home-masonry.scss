@@ -1,0 +1,401 @@
+.home-masonry {
+  display:block;
+  width:100vw;
+  @include mq(800px){
+    height:84vh;
+  }
+  .left-container {
+    @include mq(800px){
+      float:left;
+      position:relative;
+      height:100%;
+    }
+    &:hover {
+      .semi-colon:before {
+        transform:translate(-50%) rotate(90deg);
+        background-color:white;
+      }
+      .semi-colon:after {
+        transform:translate(-50%) rotate(-90deg);
+        background-color:white;
+      }
+    }
+  }
+  .right-container {
+    @include mq(800px){
+      position:relative;
+      float:right;
+      height:100%;
+    }
+  }
+  .main-block, .secondary-block, .tertiary-block, .quaternary-block {
+    cursor:pointer;
+    filter:grayscale(.5);
+    transition:filter .2s;
+    &:hover {
+      filter:grayscale(0);
+      span {
+        filter:grayscale(0);
+      }
+    }
+  }
+  .main-block {
+    height:84vh;
+    width:100vw;
+    position:relative;
+    &__slider li{
+      background-color:gray;
+      // background-size:cover;
+      // background-position:center;
+      // background-repeat:no-repeat;
+      // position:absolute;
+      // top:0;
+      // left:0;
+      width:100%;
+      height:100%;
+      // display:none;
+      &:first-child{
+        display:block;
+      }
+    }
+    @include mq(800px){
+      width:60vw;
+      height:100%;
+    }
+    h1 {
+      color:white;
+      padding-top:2rem;
+      padding-left:2rem;
+    }
+  }
+  .secondary-block {
+    width:100vw;
+    position:relative;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    height:60vh;
+    @include mq(800px){
+      height:100%;
+    }
+    a {
+      width:100%;
+      height:100%;
+    }
+    h3 {
+      width: 80%;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      bottom: 20%;
+      line-height:1.3;
+      span {
+        background-color:$hcOrange;
+        filter: grayscale(1);
+      }
+    }
+    // &:before {
+    //   content:"";
+    //   position:absolute;
+    //   left:0;
+    //   top:0;
+    //   width:100%;
+    //   height:100%;
+    //   background-color:rgba(blue, .2);
+    // }
+    @include mq(800px){
+      width:40vw;
+      height:50%;
+    }
+  }
+  .cta-block {
+    display:flex;
+    justify-content:center;
+    margin:0 auto;
+    align-items:center;
+    text-align:center;
+    width:100vw;
+    // background-color:$hcOrange;
+    background-color:$hcGray;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    padding:.6rem;
+    height:auto;
+    a {
+      position:relative;
+      display:inline-block;
+      color:white;
+      font-size: 1.5rem;
+      background-color:$hcOrange;
+      border:4px solid $hcOrange;
+      transition: background-color .2s;
+      box-shadow:2px 2px 4px rgba($black, .2);
+      padding:.3rem;
+      &:nth-of-type(1) {
+        background-color:$hcPink;
+        border:4px solid $hcPink;
+        margin-right:15px;
+          &:hover {
+            //color:$hcPink;
+            color:$white;
+            background-color:rgba(0,0,255,0);
+          }
+      }
+      &:nth-of-type(2) {
+        margin-left:15px;
+        &:hover {
+          color:$white;
+          background-color:rgba(0,0,255,0);
+        }
+      }
+      @include mq(800px){
+        padding:5px;
+        &:nth-of-type(1) {
+          margin-right:5px;
+        }
+        &:nth-of-type(2) {
+          margin-left:5px;
+        }
+      }
+      @include mq (1200px){
+        margin:3rem;
+        padding:.5rem;
+      }
+    }
+    @include mq(800px){
+      width:40vw;
+      height:15.1%;
+    }
+
+  }
+  .expandable {
+    width:100%;
+    display:flex;
+    font-family: 'Roboto Light Condensed', serif;
+    .tertiary-block, .quaternary-block {
+      flex-grow:3;
+      transition:flex-grow .5s;
+    }
+    .tertiary-block:hover, .quaternary-block:hover {
+      //border:4px solid black;
+      position:relative;
+      flex-grow:4;
+    }
+    @include mq(800px){
+      height:35%;
+    }
+  }
+    .tertiary-block {
+    background-color:brown;
+    display:block;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+    float:left;
+    height:30vh;
+    .social-block {
+      position:absolute;
+      bottom:2%;
+      right:2%;
+      padding:4px;
+      color:$white;
+      width:auto;
+      line-height:1.3;
+      font-size:1.2rem;
+      transition: height .2s, width .2s, padding .3s;
+      i {
+        float:right;
+      }
+      section {
+        width:0px;
+        height:5px;
+        color:transparent;
+        transition: height .2s, width .2s, color .1s;
+      }
+    }
+    .social-block {
+      width:96%;
+      padding:12px 4px 4px 12px;
+      background-color:rgba($black,.7);
+      section {
+        width:95%;
+        color:$white;
+        //display:block;
+        height:inherit;
+        max-height:100px;
+      }
+    }
+    @include mq(800px){
+      height:100%;
+    }
+  }
+  .quaternary-block {
+    background-color:gray;
+    display:block;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+    float:left;
+    height:30vh;
+    .social-block {
+      position:absolute;
+      bottom:2%;
+      right:2%;
+      padding:4px;
+
+      color:$white;
+      width:auto;
+      line-height:1.3;
+      font-size:1.2rem;
+      transition: width .2s, padding .3s;
+      i {
+        float:right;
+      }
+      section {
+        width:0px;
+        height:5px;
+        color:transparent;
+        transition: width .2s, color .3s;
+      }
+    }
+    .social-block {
+      width:96%;
+      padding:12px 4px 4px 12px;
+      background-color:rgba($socialBlue,.5);
+      section {
+        width:95%;
+        color:$white;
+        //display:block;
+        height:inherit;
+        max-height:100px;
+      }
+    }
+    @include mq(800px){
+      height:100%;
+    }
+  }
+  @include mq(1024px){
+  .tertiary-block {
+    background-color:brown;
+    display:block;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+    float:left;
+    height:30vh;
+    .social-block {
+      position:absolute;
+      bottom:2%;
+      right:2%;
+      padding:4px;
+      color:$white;
+      width:auto;
+      line-height:1.3;
+      font-size:1.2rem;
+      transition: height .2s, width .2s, padding .3s;
+      i {
+        float:right;
+      }
+      section {
+        width:0px;
+        height:5px;
+        color:transparent;
+        transition: height .2s, width .2s, color .1s;
+      }
+    }
+    &:hover .social-block {
+      width:96%;
+      padding:12px 4px 4px 12px;
+      background-color:rgba($black,.7);
+      section {
+        width:95%;
+        color:$white;
+        //display:block;
+        height:inherit;
+        max-height:100px;
+      }
+    }
+    @include mq(800px){
+      height:100%;
+    }
+  }
+  .quaternary-block {
+    background-color:gray;
+    display:block;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+    float:left;
+    height:30vh;
+    .social-block {
+      position:absolute;
+      bottom:2%;
+      right:2%;
+      padding:4px;
+
+      color:$white;
+      width:auto;
+      line-height:1.3;
+      font-size:1.2rem;
+      transition: width .2s, padding .3s;
+      i {
+        float:right;
+      }
+      section {
+        width:0px;
+        height:5px;
+        color:transparent;
+        transition: width .2s, color .3s;
+      }
+    }
+    &:hover .social-block {
+      width:96%;
+      padding:12px 4px 4px 12px;
+      background-color:rgba($socialBlue,.5);
+      section {
+        width:95%;
+        color:$white;
+        //display:block;
+        height:inherit;
+        max-height:100px;
+      }
+    }
+    @include mq(800px){
+      height:100%;
+    }
+  }
+  }
+}
+
+  /******************
+  * Flickity Slider Styles
+  *******************/
+
+  .main-block__slider {
+    height: 100%;
+    padding:0;
+  }
+
+  .flickity-prev-next-button {
+    display:none;
+  }
+  li.main-block__cell {
+    width:100%;
+    overflow:hidden;
+  }
+  li.main-block__cell img {
+    height:100%;
+    width:autho;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    min-width:100%;
+    min-width:100%;
+  }

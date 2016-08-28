@@ -1,0 +1,172 @@
+.one-col {
+    font-size:14px;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:5rem;
+    margin-bottom: 5rem;
+    position:relative;
+    padding:1rem;
+    color:white;
+    background-color:$hcGray;
+    z-index:3;
+    box-shadow:2px 2px 6px rgba(0,0,0,1);
+
+    @include mq(800px){
+      margin-left:40%;
+      margin-right:10%;
+    }
+    @include mq(1100px){
+      margin-left:60%;
+      margin-right:10%;
+    }
+       &:nth-of-type(1) {
+        @include mq(800px){
+          margin-top:-5rem;
+        }
+        @include mq(1100px){
+          margin-bottom:7rem;
+        }
+    }
+   .underline:after {
+      content:'';
+      position:absolute;
+      left:-20px;
+      height:100%;
+      height: 50px;
+      width: 6px;
+      background-color: $hcPink;
+      transform: translate(0,-50%);
+    }
+    .highlight {
+      background-color:$hcOrange;
+      color:$hcGray;
+      padding:4px;
+    }
+
+  }
+.one-col-img {
+  margin:-3rem 0 0 0;
+  padding:0;
+  width:100%;
+  @include mq(800px){
+    width:50%;
+    margin-left: 25%;
+
+  }
+}
+.one-col-left {
+  width:100%;
+  padding:1rem;
+  @include mq(800px){
+  width:55%;
+  margin-left:5%;
+  float:left;
+  } 
+  img {
+  width:100%;
+  margin:1rem;
+  @include mq(800px){
+  float:right;
+  width:50%;
+
+  }
+  }
+}
+.sidebar-right {
+  width:90%;
+  margin:1rem auto;
+  padding:2rem;
+  border:4px gray solid;
+  @include mq(800px){
+  width:30%;
+  float:left;
+  margin-left:5%;
+  margin-right:5%;
+  }
+      a {
+    text-decoration:underline;
+    &:hover {
+    color:$hcOrange;
+    }
+    }
+    img {
+    width:75%;
+    margin:0 12.5% 2rem 12.5%;
+    }
+}
+.pull-quote {
+  background-color:$hcPink;
+  color:white;
+  padding:1rem 1rem 1rem 3rem;
+  margin-top:1rem;
+  margin-bottom:1rem;
+}
+.multi-col {
+    font-size:14px;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:0rem;
+    margin-bottom: 5rem;
+    position:relative;
+    padding:1rem;
+    color:$hcGray;
+    z-index:3;
+    @include mq(800px){
+      column-count:2;
+      column-width:39%;
+      column-gap:20px;
+    }
+    @include mq(1100px){
+      column-width:26%;
+    }
+   .underline:after {
+      content:'';
+      position:absolute;
+      left:-20px;
+      height:100%;
+      height: 50px;
+      width: 6px;
+      background-color: $hcPink;
+      transform: translate(0,-50%);
+    }
+    .highlight {
+      background-color:$hcOrange;
+      color:$hcGray;
+      padding:4px;
+    }
+
+  }
+  #accordion {
+  width:100%;
+  padding:1rem;
+  margin-bottom:2rem;
+  @include mq(800px) {
+  width:75%;
+  margin:0 auto 2rem auto;
+  border:1px solid $hcOrange;
+  }
+  @include mq(1100px) {
+  width:50%
+  }
+  h3 {
+  background:$hcOrange;
+  padding:1rem;
+  margin:0.25rem;
+  font-weight:bold;
+  font-size:1.4rem;
+  box-shadow:5px 5px 5px #ebebeb;
+  }
+  p {
+  font-size:14pt;
+  padding:2rem;
+  }
+  ul {
+  padding:4rem;
+  padding-top:0;
+  list-style:circle;
+  li {
+  font-size:14pt;
+  line-height:1.5;
+  }}
+
+  }
